@@ -1,2 +1,3 @@
-- [ ] Allow user to select number generation boundaries
 - [x] Allow input of text strings as well as integer inputs
+- [ ] Allow user to select number generation boundaries `EASY`
+- [ ] Give user option to replay without having to manually rerun script `UNKNOWN`
