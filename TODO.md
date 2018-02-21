@@ -1,2 +1,2 @@
 - [ ] Allow user to select number generation boundaries
-- [ ] Allow input of text strings as well as integer inputs
+- [x] Allow input of text strings as well as integer inputs
