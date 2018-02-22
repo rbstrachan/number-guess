@@ -2,7 +2,7 @@ import random
 
 play_again = True
 
-print "THIS IS A STABLE RELEASE. AS SUCH, THIS PROGRAM WILL ONLY ACCEPT NUMERICAL INPUTS WHEN PROMTED. I'M WORKING ON A FIX."
+print "THIS IS A STABLE RELEASE. AS SUCH, THIS PROGRAM WILL ONLY ACCEPT NUMERICAL INPUTS FOR pick_bound AND guess VARIABLES. CONTACT dev@nvai.com FOR MORE INFORMATION."
 print
 
 while play_again:
@@ -25,20 +25,27 @@ while play_again:
 			ran_num = random.randint(1,10)
 			print
 			print "Oh, ok then. I'm thinking of a number between one and ten."
-			print
 			guess = raw_input("Take a guess at what it might be: ")
 
 	if int(guess) == ran_num:
 		print
-		print "Correct."
-	elif int(guess) < ran_num:
+		print "Correct. I was thinking of the number " + str(ran_num) + "."
+	elif int(guess) < ran_num - 0.5*ran_num:
 		print
-		print "Ooh, too low."
-		print "I was thinking of " + str(ran_num) + "."
-	elif int(guess) > ran_num:
+		print "Ooh, you were way too low."
+		print "I was thinking of the number " + str(ran_num) + "."
+	elif int(guess) < ran_num - 0.1*ran_num:
 		print
-		print "Just a little too high."
-		print "I was thinking of " + str(ran_num) + "."
+		print "You were very close - just slightly too low."
+		print "I was thinking of the number " + str(ran_num) + "."
+	elif int(guess) > ran_num + 0.5*ran_num:
+		print
+		print "Ooh, you guessed quite high!"
+		print "I was thinking of the number " + str(ran_num) + "."
+	elif int(guess) > ran_num + 0.1*ran_num:
+		print
+		print "Your guess was quite close - just a little too high."
+		print "I was thinking of the number " + str(ran_num) + "."
 
 	print
 
@@ -46,5 +53,3 @@ while play_again:
 	again = raw_input("Would you like to guess again? ")
 	if again.lower() == "no" or again.lower() == "n":
 		play_again = False
-	else:
-		print
