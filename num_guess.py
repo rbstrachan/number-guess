@@ -30,19 +30,19 @@ while play_again:
 	if int(guess) == ran_num:
 		print
 		print "Correct. I was thinking of the number " + str(ran_num) + "."
-	elif int(guess) < ran_num - 0.5*ran_num:
+	elif int(guess) <= ran_num - 0.5*ran_num:
 		print
 		print "Ooh, you were way too low."
 		print "I was thinking of the number " + str(ran_num) + "."
-	elif int(guess) < ran_num - 0.1*ran_num:
+	elif int(guess) <= ran_num - 0.1*ran_num:
 		print
 		print "You were very close - just slightly too low."
 		print "I was thinking of the number " + str(ran_num) + "."
-	elif int(guess) > ran_num + 0.5*ran_num:
+	elif int(guess) >= ran_num + 0.5*ran_num:
 		print
 		print "Ooh, you guessed quite high!"
 		print "I was thinking of the number " + str(ran_num) + "."
-	elif int(guess) > ran_num + 0.1*ran_num:
+	elif int(guess) >= ran_num + 0.1*ran_num:
 		print
 		print "Your guess was quite close - just a little too high."
 		print "I was thinking of the number " + str(ran_num) + "."
