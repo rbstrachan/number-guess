@@ -2,6 +2,9 @@ import random
 
 play_again = True
 
+print "THIS IS A STABLE RELEASE. AS SUCH, THIS PROGRAM WILL ONLY ACCEPT NUMERICAL INPUTS WHEN PROMTED. I'M WORKING ON A FIX."
+print
+
 while play_again:
 	pick_bound = True
 	while pick_bound:
@@ -25,28 +28,6 @@ while play_again:
 			print
 			guess = raw_input("Take a guess at what it might be: ")
 
-			# Converts guess type from str to int.
-			if guess == "one":
-				guess = 1
-			elif guess == "two":
-				guess = 2
-			elif guess == "three":
-				guess = 3
-			elif guess == "four":
-				guess = 4
-			elif guess == "five":
-				guess = 5
-			elif guess == "six":
-				guess = 6
-			elif guess == "seven":
-				guess = 7
-			elif guess == "eight":
-				guess = 8
-			elif guess == "nine":
-				guess = 9
-			elif guess == "ten":
-				guess = 10
-
 	if int(guess) == ran_num:
 		print
 		print "Correct."
@@ -67,4 +48,3 @@ while play_again:
 		play_again = False
 	else:
 		print
-		
